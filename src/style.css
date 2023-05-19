@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  --color1: #ffffff;
+  --color2: #000000;
+  --color3: #023473;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  padding: 35px 20px;
+  gap: 10%;
+}
+.logo img {
+  width: 100px;
+}
+.menu {
+  display: flex;
+  gap: 100px;
+}
+.menu li {
+  padding-left: 30px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+
+.ita-menu {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 600px;
+  background: linear-gradient(180deg, #05adc0 0%, #023473 100%);
+}
+.ita-menu .conectando {
+  font-size: 38px;
+  color: var(--color1);
+  width: 380px;
+  line-height: 52px;
+  margin-bottom: 40px;
+}
+.ita-menu .saiba {
+  background: var(--color1);
+  color: var(--color3);
+  height: 60px;
+  width: 200px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+#nossas-solucoes {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: white;
+}
+
+.nsimg {
+  width: 400px;
+  height: 600px;
+}
+
+.nsimgdiv {
+  display: flex;
+}
+
+.saiba-ns {
+  background: var(--color3);
+  color: var(--color1);
+  height: 60px;
+  width: 150px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.blue-cube {
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: var(--color3);
+  color: var(--color1);
+  text-align: center;
+  font-weight: 600;
+}
+
+.white-cube {
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: var(--color1);
+  color: var(--color3);
+  text-align: center;
+  font-weight: 600;
+}
+
+.containerns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
