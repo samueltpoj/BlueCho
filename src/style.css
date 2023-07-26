@@ -58,6 +58,12 @@ p {
 .publicidade .titulo {
   align-items: flex-start;
 }
+.public {
+  display: flex;
+  flex-direction: column;
+  margin-top: 26px;
+  gap: 10px;
+}
 .publiimg {
   position: relative;
   display: flex;
@@ -72,6 +78,7 @@ p {
   display: flex;
   text-align: start;
   align-items: baseline;
+  gap: 15px;
 }
 .menu {
   display: flex;
