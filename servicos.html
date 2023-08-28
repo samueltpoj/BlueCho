@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços</title>
+    <link href="src/main.js" rel="script" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+          screens: {
+            "2xl": "1536px",
+            xl: "1280px",
+            lg: "1024px",
+            md: "768px",
+            sm: "640px",
+            xs: "540px",
+            "2xs": "390px",
+            "3xs": "340px",
+          },
+          //   fontSize: {
+          //     "3xs": "10px",
+          //     "2xs": "13px",
+          //     xs: "14px",
+          //     sm: "16px",
+          //     base: "18px",
+          //     lg: "20px",
+          //     xl: "24px",
+          //     "2xl": "30px",
+          //     "3xl": "36px",
+          //     "4xl": "48px",
+          //     "5xl": "60px",
+          //     "6xl": "72px",
+          //     "7xl": "96px",
+          //     "8xl": "128px",
+          //     "9xl": "156px",
+          //   },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section class="w-full h-screen">
+      <div class="px-20 pt-8 flex gap-16 h-4/5 bg-blue-700">
+        <img
+          src="./images/bclogo2.png"
+          alt=""
+          class="w-[378.02px] h-[178.63px]"
+        />
+        <header class="h-10 flex gap-10">
+          <a href="" class="text-white font-semibold">Home</a>
+          <a href="" class="text-white font-semibold">Serviços</a>
+          <a href="" class="text-white font-semibold">Soluções</a>
+          <a href="" class="text-white font-semibold">Parceiros</a>
+          <a href="" class="text-white font-semibold">Conheça a ITA</a>
+        </header>
+      </div>
+      <div
+        class="bg-transparent w-screen flex flex-col gap-9 items-center absolute top-1/2"
+      >
+        <h1 class="text-white text-4xl font-bold">Monte o seu plano</h1>
+        <div
+          class="w-3/5 flex flex-col items-center bg-white rounded-lg p-8 shadow-lg"
+        >
+          <h2 class="text-xl text-zinc-400 font-semibold">
+            Vamos montar o melhor plano para o seu negócio?
+          </h2>
+          <div class="grid grid-cols-2 gap-8 w-full p-6">
+            <div class="flex flex-col gap-2">
+              <label for="dropdown" class="font-semibold"
+                >Você ja tem um site?</label
+              >
+              <div class="border-[1px] border-zinc-200 h-12 rounded-md p-3">
+                <select
+                  name=""
+                  id="dropdown"
+                  class="w-full h-full text-zinc-800"
+                >
+                  <option value="rh">RH</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="dropdown" class="font-semibold"
+                >Coloque seu email aqui</label
+              >
+              <div class="border-[1px] border-zinc-200 h-12 rounded-md p-3">
+                <input
+                  type="text"
+                  class="w-full h-full"
+                  placeholder="Seu email aqui"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="dropdown" class="font-semibold"
+                >Qual serviços você precisa de informação?</label
+              >
+              <div class="border-[1px] border-zinc-200 h-12 rounded-md p-3">
+                <select
+                  name=""
+                  id="dropdown"
+                  class="w-full h-full text-zinc-800"
+                >
+                  <option value="rh" class="border-zinc-200">
+                    Machine learning
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="dropdown" class="font-semibold"
+                >Coloque seu nome aqui</label
+              >
+              <div class="border-[1px] border-zinc-200 h-12 rounded-md p-3">
+                <input
+                  type="text"
+                  placeholder="Seu nome aqui"
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col w-screen pt-52 flex flex-col items-center gap-12">
+      <h2 class="text-3xl font-normal">
+        Serviços de qualidade para impulsionar o seu Negócio
+      </h2>
+      <p class="text-lg text-zinc-400 font-light">
+        Transformando o mundo com publicidade digital
+      </p>
+      <div class="w-screen flex px-32 items-center">
+        <div class="w-1/2 h-1/2 flex flex-col gap-6">
+          <h3 class="text-4xl font-semibold">Targeting Avançado</h3>
+          <p class="text-lg">
+            Usando dados demográficos, comportamentais e contextuais, as
+            empresas de mídia programática podem segmentar com precisão o
+            público-alvo dos anunciantes, ajudando a maximizar o retorno sobre o
+            investimento (ROI) das campanhas publicitária
+          </p>
+          <button class="bg-blue-700 text-white w-28 h-10 rounded-xl shadow-md">
+            Saiba mais
+          </button>
+        </div>
+        <div class="w-1/2 p-5">
+          <img src="./images/asde.png" alt="" class="w-[500px]" />
+        </div>
+      </div>
+
+      <div
+      class="flex flex-col w-screen  flex flex-col items-center gap-5"
+    >
+      <div class="w-screen flex px-32 items-center">
+        <div class="w-1/2 p-5">
+          <img src="./images/Imaewrfewge.png" alt="" class="w-[500px]" />
+        </div>
+        <div class="w-1/2 h-1/2 flex flex-col gap-6">
+          <h3 class="text-4xl font-semibold">Anúncios personalizados</h3>
+          <p class="text-lg">
+            Anúncios personalizados com base em dados do público-alvo, como
+            localização geográfica, histórico de compras, interesses e
+            comportamentos on-line.
+          </p>
+          <button class="bg-blue-700 text-white w-28 h-10 rounded-xl shadow-md">
+            Saiba mais
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col w-screen flex flex-col items-center gap-5"
+    >
+      <div class="w-screen flex px-32 items-center">
+        <div class="w-1/2 h-1/2 flex flex-col gap-6">
+          <h3 class="text-4xl font-semibold">Programmatic buying</h3>
+          <p class="text-lg">
+            Tecnologia de leilão em tempo real para comprar espaços
+            publicitários em sites e aplicativos relevantes para o público-alvo.
+            Essa abordagem ajuda a reduzir o desperdício de anúncios e a
+            otimizar o ROI das campanhas publicitárias.
+          </p>
+          <button class="bg-blue-700 text-white w-28 h-10 rounded-xl shadow-md">
+            Saiba mais
+          </button>
+        </div>
+        <div class="w-1/2 p-5">
+          <img src="./images/werweferw.png" alt="" class="w-[500px]" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col w-screen flex flex-col items-center gap-5"
+    >
+      <div class="w-screen flex px-32 items-center">
+        <div class="w-1/2 p-5">
+          <img src="./images/rwerfwrfefwq.png" alt="" class="w-[500px]" />
+        </div>
+        <div class="w-1/2 h-1/2 flex flex-col gap-6">
+          <h3 class="text-4xl font-semibold">Medição e análise</h3>
+          <p class="text-lg">
+            Ferramentas de análise e relatórios para ajudar os anunciantes a
+            entender o desempenho de suas campanhas publicitárias e identificar
+            oportunidades de melhoria.
+          </p>
+          <button class="bg-blue-700 text-white w-28 h-10 rounded-xl shadow-md">
+            Saiba mais
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col w-screen flex flex-col items-center gap-5"
+    >
+      <div class="w-screen flex px-32 items-center">
+        <div class="w-1/2 h-1/2 flex flex-col gap-6">
+          <h3 class="text-4xl font-semibold">Cross-channel marketing</h3>
+          <p class="text-lg">
+            Campanhas de marketing integradas que englobam diversos canais, como
+            redes sociais, pesquisa paga e e-mail marketing, para maximizar o
+            alcance e a eficácia da campanha publicitária.
+          </p>
+          <button class="bg-blue-700 text-white w-28 h-10 rounded-xl shadow-md">
+            Saiba mais
+          </button>
+        </div>
+        <div class="w-1/2 p-5">
+          <img src="./images/gthrshgt.png" alt="" class="w-[500px]" />
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </body>
+</html>

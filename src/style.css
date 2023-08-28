@@ -1,11 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   --color1: #ffffff;
@@ -13,80 +19,242 @@ body {
   --color3: #023473;
   overflow-x: hidden;
 }
-.nav-bar {
-  width: 100%;
+
+nav {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+}
+
+.nav-bar {
+  width: 100vw;
+  display: flex;
+  align-items: center;
   list-style: none;
   position: absolute;
-  padding: 35px 20px;
+  padding: 5px 20px;
+  border-bottom: 1.5px solid #00000011;
   justify-content: space-between;
 }
-.titulo {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 10px;
+
+.logo {
+  margin-left: 4rem;
 }
+
+.s-btn {
+  display: flex;
+  gap: 1rem;
+  margin-right: 4rem;
+}
+
+.login-btn {
+  padding: 0.75rem;
+  width: 5rem;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+  color: #7a7a7a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #cfcfcf;
+  color: #7a7a7a;
+}
+
+.so-btn {
+  padding: 0.6rem;
+  width: 11rem;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+  background-color: #1400ff;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.so-btn:hover {
+  background-color: #1533ff;
+}
+
+.conectando {
+  margin-top: 2rem;
+  text-align: justify;
+  font-weight: 700;
+  width: 100%;
+}
+
 .campanhas {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
 .titulo h1 {
-  width: 40%;
+  width: 100%;
   font-size: 48px;
 }
+
 .titulo p {
-  width: 50%;
-  font-size: 16px;
+  width: 75%;
+  font-size: 20px;
+  font-weight: 200;
   color: #606060;
+  text-align: center;
+}
+
+#sessao3 {
+  display: flex;
+  height: 100vh;
+  align-items: start;
+  justify-content: start;
+}
+
+.publi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 1rem;
+  margin-left: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.public {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.titulo-publi {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  width: 100%;
+  font-size: 42px;
+}
+
+.subtitulo-publi {
+  font-size: 24px;
+  font-weight: 200;
+  color: #7a7a7a;
+  margin-bottom: 3rem;
+}
+
+.publiimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  margin-right: 28rem;
 }
 
 .publicidade {
   height: 100vh;
   display: flex;
-  justify-content: center;
 }
+
 .publicidade h1,
 p {
-  width: 70% !important;
+  width: 100% !important;
   text-align: start;
 }
-.publicidade .titulo {
-  align-items: flex-start;
-}
+
 .public {
   display: flex;
   flex-direction: column;
-  margin-top: 26px;
-  gap: 10px;
 }
+
 .publiimg {
   position: relative;
   display: flex;
   align-items: flex-start;
 }
+
 .publiimg .girl {
   position: absolute;
-  left: -210px;
+  margin-left: 14rem;
+  left: -200px;
   top: 370px;
 }
+
 .publichecks {
   display: flex;
   text-align: start;
   align-items: baseline;
-  gap: 15px;
+  margin-top: 0.75rem;
+  display: flex;
+  width: 85%;
 }
+
+#sessao4 {
+  display: flex;
+  height: 100vh;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row-reverse;
+  margin-left: 18rem;
+}
+
+.titulo-ds {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  width: 100%;
+  font-size: 32px;
+}
+
+.dsimg {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.dschecks {
+  display: flex;
+  text-align: start;
+  align-items: baseline;
+  margin-top: 0.75rem;
+  display: flex;
+  width: 85%;
+}
+
+.ds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 1rem;
+  margin-left: 16rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.primg {
+  position: absolute;
+  left: 1040px;
+  top: 250px;
+}
+
 .menu {
   display: flex;
-  gap: 100px;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
 }
-.menu li {
-  padding-left: 30px;
-}
+
 .menu li a {
   display: inline-block;
   text-decoration: none;
@@ -97,6 +265,7 @@ p {
   font-size: 20px;
   position: relative;
 }
+
 .open-menu,
 .close-menu {
   position: absolute;
@@ -105,34 +274,22 @@ p {
   font-size: 1.5rem;
   display: none;
 }
+
 .open-menu {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
+
 .close-menu {
   top: 20px;
   right: 20px;
 }
+
 #check {
   display: none;
 }
 
-.ita-menu {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 600px;
-  background: linear-gradient(180deg, #0083e0 0%, #023473 100%);
-}
-.ita-menu .conectando {
-  font-size: 38px;
-  color: var(--color1);
-  width: 380px;
-  line-height: 52px;
-  margin-bottom: 40px;
-}
 .ita-menu .saiba {
   background: var(--color1);
   color: var(--color3);
@@ -209,72 +366,48 @@ p {
   justify-content: space-between;
   flex-direction: row;
 }
+
 .conheca {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.equipe {
-  background: linear-gradient(180deg, #0083e0 0%, var(--color3) 100%);
-  width: 90vw;
-  border-radius: 200px 0px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  color: var(--color1);
-  padding: 50px;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 .equipe h1 {
   font-size: 54px;
   margin: 30px;
 }
-.cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.card {
-  margin: 40px;
-  width: 300px;
-  height: 300px;
-  background: var(--color1);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 10px;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  gap: 10px;
-}
+
 .card i {
   color: #2e4cff;
 }
+
 .redes {
   display: flex;
   margin-top: 20px;
   gap: 40px;
 }
+
 .card h3 {
   color: var(--color2);
 }
+
 .card p {
   color: #7a7a7a;
 }
+
 .nome {
   position: relative;
   height: 40px;
   display: flex;
   align-items: end;
 }
+
 .nome img {
   position: absolute;
   right: -35px;
 }
+
 .features-section {
   display: flex;
   margin-bottom: 5%;

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlueCho</title>
-    <link href="src/style.css" rel="stylesheet" />
     <link href="src/main.js" rel="script" />
     <link
       rel="stylesheet"
@@ -14,64 +13,129 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+            colors: {
+              pink: "#EC407A",
+              white: colors.white,
+              black: colors.black,
+              gray: colors.gray,
+              green: "#339933",
+              red: colors.red,
+              blue: colors.blue,
+              orange: "#e35f01",
+              rose: "#EC407A66",
+              btncolor: "#1400FF",
+              background: "#f2f2f2",
+          },
+          extend: {},
+          // screens: {
+          //   "2xl": "1536px",
+          //   xl: "1280px",
+          //   lg: "1024px",
+          //   md: "768px",
+          //   sm: "640px",
+          //   xs: "540px",
+          //   "2xs": "390px",
+          //   "3xs": "340px",
+          // },
+          // fontSize: {
+          //   "3xs": "10px",
+          //   "2xs": "13px",
+          //   xs: "14px",
+          //   sm: "16px",
+          //   base: "18px",
+          //   lg: "20px",
+          //   xl: "24px",
+          //   "2xl": "30px",
+          //   "3xl": "36px",
+          //   "4xl": "48px",
+          //   "5xl": "60px",
+          //   "6xl": "72px",
+          //   "7xl": "96px",
+          //   "8xl": "128px",
+          //   "9xl": "156px",
+          // },
+        },
+      }
+    </script>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="nav-bar">
-          <li class="logo">
-            <a href="#"><img src="./images/bclogo.png" alt="" /></a>
-          </li>
-          <input type="checkbox" id="check" />
-          <span class="menu">
-            <li>
-              <a href="#nossas-solucoes">Nossas soluções</a>
-            </li>
-            <li>
-              <a href="#section3">Sobre nós</a>
-            </li>
-            <li>
-              <a href="#section3">Cases</a>
-            </li>
-            <li>
-              <a href="#section4">Equipe</a>
-            </li>
-            <li>
-              <a href="#section5">Contato</a>
-            </li>
-            <label for="check" class="close-menu"
-              ><i class="fas fa-times"></i
-            ></label>
-          </span>
-          <label for="check" class="open-menu"
-            ><i class="fas fa-bars"></i
-          ></label>
-          <span>
-            <button>Login</button>
-            <button>Solicite um orçamento</button>
-          </span>
-        </ul>
+  <body class="overflow-x-hidden">
+    <header class="absolute bg-gradient-to-b from-blue-500 to-blue-900 inset-x-0 top-0 z-50 h-screen w-screen">
+      <nav class="flex items-center justify-between border-b solid border-gray-300 p-6 h-24 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Bluecho</span>
+            <img  src="./images/bclogo.png" alt="">
+          </a>
+        </div>
+        <div class="flex just lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-white">Nossas soluções</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-white">Sobre nós</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-white">Cases</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-white">Equipe</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-white">Contato</a>
+        </div>
       </nav>
-    </header>
-    <main>
-      <section id="sessao1">
-        <div class="ita-menu">
-          <div>
-            <img src="./images/bclogo2.png" alt="" />
-            <h1 class="conectando">Conectando marcas e pessoas!</h1>
-            <button class="saiba">Saiba mais!</button>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <!-- <div class="lg:hidden" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="./images/bclogo.png" alt="">
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
-          <img src="./images/photo.svg" alt="" height="500px" />
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Nossas soluções</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre nós</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Cases</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Equipe</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contato</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <section id="sessao1">
+        <div class="h-screen flex items-center xs:flex-col leading-12 mb-5 justify-around">
+          <div>
+            <img class="aspect-auto h-48 -mt-24" src="./images/bclogo2.png" alt=""/>
+            <h1 class="text-white text-4xl font-semibold w-4/6 color-white mt-2">Conectando marcas e pessoas!</h1>
+            <button class="ml-8 text-blue-700 font-semibold hover:bg-gray-200 border-none h-14 rounded-lg w-40 bg-white mt-10">Saiba mais!</button>
+          </div>
+          <img class="aspect-auto h-[360px] -mt-24" src="./images/photo.svg" alt=""/>
         </div>
       </section>
+    </header>
+    <main>
       <section id="sessao2">
-        <div class="campanhas">
-          <div class="titulo">
-            <h1>
+        <div>
+          <div class="flex items-center flex-col text-center gap-1 w-3/6 h-screen w-screen">
+            <h1 class="w-full text-lg">
               Obtenha a estratégia certa para continuar avançando com suas
               campanhas.
             </h1>
-            <p>
+            <p class="w-4/6 text-lg font-semibold color-gray-400">
               Desde campanhas de tráfego personalizadas até o serviço de
               desenvolvimento de software, nossa equipe e tecnologia irão
               apoiá-lo em cada etapa do caminho na mídia programática. Junte-se
@@ -79,18 +143,18 @@
               agências de mídia programática.
             </p>
           </div>
-          <div class="cards">
-            <div class="card">
+          <div class="flex items-center justify-center flex-wrap">
+            <div class="flex items-center justify-center flex-wrap">
               <img src="./images/campanha1.svg" />
-              <h1 class="conectando">US$31,5 bilhões</h1>
+              <h1 class="mt-2 text-justify font-semibold w-full">US$31,5 bilhões</h1>
               <p>
                 Em 2021, o mercado de publicidade de Retail Media atingiu
                 US$31,5 bilhões somente nos Estados Unidos.
               </p>
             </div>
-            <div class="card">
+            <div class="flex items-center justify-center flex-wrap">
               <img src="./images/campanha2.svg" />
-              <h1 class="conectando">oportunidades de crescimento</h1>
+              <h1 class="mt-2 text-justify font-semibold w-full">oportunidades de crescimento</h1>
               <p>
                 Em 2021, o mercado de
                 publicidade de Retail Media 
@@ -98,9 +162,9 @@
                 nos Estados Unidos.
               </p>
             </div>
-            <div class="card">
+            <div class="flex items-center justify-center flex-wrap">
               <img src="./images/campanha3.svg" />
-              <h1 class="conectando">24 hs de suporte</h1>
+              <h1 class="mt-2 text-justify font-semibold w-full">24 hs de suporte</h1>
               <p>
                 A previsão 
                 é que haja um aumento de 53% 
@@ -111,17 +175,19 @@
           </div>
         </div>
       </section>
-      <section id="sessao3">
-          <div class="titulo">
-            <h1>
-              Publicidade dentro de ambientes de varejo
-            </h1>
+      <section id="sessao3" class="flex h-screen w-screen items-center p-24">
+        <div class="flex flex-col justify-center items-start w-6/12 gap-6 ml-8 mb-8">
+          <div class="flex font-semibold flex-col flex-start items-start text-start text-6xl font-semibold w-[660px]" className="font-extrabold text-3xl">
+              <h1>
+                Publicidade dentro de ambientes de varejo
+              </h1>
+          </div>
+          <div class="text-xl font-normal text-[#464854] text mb-3">
             <p>
               É sobre alcançar os consumidores no momento exato em que eles estão engajados em atividades de compra.
             </p>
-        </div>
-        <div class="public">
-          <div class="publichecks">            
+          </div>
+          <div class="flex text-start items-baseline mt-1 w-5/6">            
             <img src="./images/check.svg" />
             <div>
               <h2>Mídia programática x Retail Media</h2>
@@ -130,7 +196,7 @@
               </p>
             </div>
           </div>
-          <div class="publichecks">            
+          <div class="flex text-start items-baseline mt-1 w-5/6">            
             <img src="./images/check.svg" />
             <div>
               <h2>Venda de mídia programática</h2>
@@ -139,7 +205,7 @@
               </p>
             </div>
           </div>
-          <div class="publichecks">            
+          <div class="flex text-start items-baseline mt-1 w-5/6">            
             <img src="./images/check.svg" />
             <div>
               <h2>Compra de Mídia "não programática" (por "P.I.")</h2>
@@ -149,216 +215,241 @@
             </div>
           </div>
         </div>
-        </div>
-          <div class="publiimg">
-            <img src="./images/publi.svg" class="girl"/>
-            <img src="./images/publi.png" />
-          </div>
-        </div>
-      </section>
-      <!-- <section id="nossas-solucoes">
-        <div class="containerns">
-          <div class="nsimgdiv">
-            <img class="nsimg" src="./images/Rectangle 16.svg" alt="" />
-          </div>
-          <div>
-            <h2 class="title-ns">Nossas soluções</h2>
-          </div>
-          <div class="cubes">
-            <div>
-              <p class="blue-cube">Venda de mídia programática</p>
+          <div class="flex flex-col">
+            <div class="relative flex items-start">
+              <img src="./images/publi.svg" class="absolute ml-14 -left-[100px] top-[300px] w-[240px] "/>
+              <img src="./images/publi.png" class="w-[380px] ml-28 w" />
             </div>
-            <div>
-              <p class="white-cube">Desenvolvimento de site</p>
-            </div>
-            <div>
-              <p class="white-cube">
-                Compra de mídia "não programática" (por "P.I.")
-              </p>
-            </div>
-            <div>
-              <p class="blue-cube">Desenvolvimento de Sites e API's</p>
-            </div>
-            <div>
-              <p class="white-cube">
-                Social mídia focado em tráfego pago e orgânico; Mlabs;
-                RDStation; Face Ads; Google Ads; Insta Ads.
-              </p>
-            </div>
-            <div>
-              <p class="blue-cube">DOOH</p>
-            </div>
-          </div>
-          <div>
-            <button class="saiba-ns">Saiba mais</button>
           </div>
         </div>
       </section>
-      <section class="features-section">
-        <div class="features">
-          <div class="title-feature">
-            <h3>Features</h3>
+      <section class="flex h-screen w-screen items-start justify-start flex-row-reverse ml-18">
+        <div class="flex flex-col justify-center items-center gap-1 ml-16 mt-8 mb-8">
+          <div class="flex flex-col justify-start items-start text-start w-full text-[32px] font-bold w-[640px]">
+              <h1>
+                Desenvolvimento de Software
+              </h1>
           </div>
-          <div class="feature">
-            <h3 class="features-title">Targeting avançado</h3>
+          <div class="text-[24px] text-[#7a7a7a] mb-3 w-[640px]">
             <p>
-              Usando dados demográficos, comportamentais e contextuais, as
-              empresas de mídia programática podem segmentar com precisão o
-              público-alvo dos anunciantes, ajudando a maximizar o retorno sobre
-              o investimento (ROI) das campanhas publicitárias.
+              Sometimes features require a short description. This can be detailed description or just a short text.
             </p>
           </div>
-          <div class="feature">
-            <h3 class="features-title">Anúncios personalizados:</h3>
-            <p>
-              Anúncios personalizados com base em dados do público-alvo, como
-              localização geográfica, histórico de compras, interesses e
-              comportamentos on-line.
-            </p>
+          <div class="flex text-start items-baseline mt-1 w-9/12 w-[640px]">            
+            <img src="./images/check.svg" />
+            <div>
+              <h2>Desenvolimento</h2>
+            </div>
           </div>
-          <div class="feature">
-            <h3 class="features-title">Programmatic buying:</h3>
-            <p>
-              Tecnologia de leilão em tempo real para comprar espaços
-              publicitários em sites e aplicativos relevantes para o
-              público-alvo. Essa abordagem ajuda a reduzir o desperdício de
-              anúncios e a otimizar o ROI das campanhas publicitárias.
-            </p>
+          <div class="flex text-start items-baseline mt-1 w-9/12 w-[640px]">            
+            <img src="./images/check.svg" />
+            <div>
+              <h2>Automatização</h2>
+            </div>
           </div>
-          <div class="feature">
-            <h3 class="features-title">Medição e análise:</h3>
-            <p>
-              Ferramentas de análise e relatórios para ajudar os anunciantes a
-              entender o desempenho de suas campanhas publicitárias e
-              identificar oportunidades de melhoria.
-            </p>
-          </div>
-          <div class="feature">
-            <h3 class="features-title">Cross-channel marketing:</h3>
-            <p>
-              Campanhas de marketing integradas que englobam diversos canais,
-              como redes sociais, pesquisa paga e e-mail marketing, para
-              maximizar o alcance e a eficácia da campanha publicitária.
-            </p>
+          <div class="flex text-start items-baseline mt-1 w-9/12 w-[640px]">            
+            <img src="./images/check.svg" />
+            <div>
+              <h2>APIs</h2>
+            </div>
           </div>
         </div>
-      </section> -->
-      <section id="sessao1312312">
-        <div class="conheca">
-          <div class="equipe">
-            <h1>Conheça nossa equipe!</h1>
-            <div class="cards">
-              <div class="card">
+          <div class="flex justify-start items-start">
+            <div class="relative flex flex-start">
+              <img src="./images/Image.png"/>
+              <img class="absolute left-[840px] top-[260px]" src="./images/cuate.png"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sessao1312312" c>
+        <div class="flex justify-center mx-12 items-center p-8">
+          <div class="bg-blue-700 h-screen rounded-xl w-full flex justify-center items-center">
+            <!-- <h1 class="text-3xl m-4 text-white font-semibold">Conheça nossa equipe!</h1> -->
+            <div class="grid grid-cols-5 gap-32">
+              <div class="relative m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/paola.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Paola Fernandes</h3>
+                <h3>Paola Fernandes</h3>
+                <div class="absolute right-[35px] top-[145px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Product UX <br />Analista de Sal Mídia</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="relative m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/alexandra.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Alexandra Cardoso</h3>
+                <h3>Alexandra Cardoso</h3>
+                <div class="absolute right-[30px] top-[150px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Product Manager</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/tassyla.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Tássyla de Melo</h3>
+                <h3>Tássyla de Melo</h3>
+                <div class="absolute left-[230px] top-[2480px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Product Owner</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/bruna.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Bruna Gaglhiarde</h3>
+                <h3>Bruna Gaglhiarde</h3>
+                <div class="absolute left-[230px] top-[2480px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Gerente de Operações</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/leticia.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Letícia Carvalho</h3>
+                <h3>Letícia Carvalho</h3>
+                <div class="absolute left-[230px] top-[2480px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Analista de Requisitos</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/samuel.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Samuel Trindade</h3>
+                <h3>Samuel Trindade</h3>
+                <div class="absolute left-[230px] top-[2480px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Tech Lead</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/thiago.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Thiago Barreto</h3>
+                <h3>Thiago Barreto</h3>
+                <div class="absolute left-[230px] top-[2480px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Tech Lead</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/vitor.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Vitor Figueiredo</h3>
-                  <img src="./images/butterfly.svg" alt="" width="40px" />
+                <h3>Vitor Figueiredo</h3>
+                <div class="absolute left-[270px] top-[2780px] z-50">
+                  <img src="./images/butterfly.svg" alt="" width="40px"  class="absolute"/>
                 </div>
                 <p>Gerente de <br />Desenvolvimento de Software</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <i class="fa-brands fa-linkedin fa-xl"></i>
                   <i class="fa-brands fa-instagram fa-xl"></i>
                 </div>
               </div>
-              <div class="card">
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
                 <img src="./images/isabela.png" alt="" width="120px" />
-                <div class="nome">
-                  <h3>Isabela Figueiredo </h3>
+                <h3>Isabela Figueiredo </h3>
+                <div class="absolute left-[270px] top-[2780px] z-50">
                   <img src="./images/butterfly.svg" alt="" width="40px" />
                 </div>
                 <p>Coordenadora de Eventos</p>
-                <div class="redes">
+                <div class="flex mt-2 gap-5">
                   <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </div>
               </div>
+              <div class="m-3 w-64 h-96 bg-white flex items-center justify-around flex-col rounded-lg text-center shadow-md p-5">
+                <img src="./images/vitor.png" alt="" width="120px" />
+                <h3>Lara Leal</h3>
+                <div class="absolute left-[270px] top-[2780px] z-50">
+                  <img src="./images/butterfly.svg" alt="" width="40px"  class="absolute"/>
+                </div>
+                <p>Product UX <br />Tech Lead</p>
+                <div class="flex mt-2 gap-5">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                  <i class="fa-brands fa-instagram fa-xl"></i>
+                </div>
+              </div>
             </div>
+            <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+              <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#0083e0] to-[#023473] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
         </div>
       </section>
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Empresas que alavancaram seu negócio com a Blue Cho</h2>
+          <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+            <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+          </div>
+        </div>
+      </div>
     </main>
   </body>
+  <footer>
+    <!-- <div>
+      <p>
+        Obrigado por nos visitar ! Aguardamos ansiosamente pelo seu contato :)
+      </p>
+      <div class="mt-6 flex max-w-md gap-x-4">
+        <label for="email-address" class="sr-only">Email address</label>
+        <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your email">
+        <button type="submit" class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
+      </div>
+    </div> -->
+    <div class="relative isolate overflow-hidden bg-blue-700 py-16 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto flex justify-center max-w-2xl gap-x-8 gap-y-16 lg:max-w-none">
+          <div class="max-w-xl lg:max-w-lg">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Preparado para conectar sua marca com seus clientes</h2>
+            <p class="mt-4 text-lg leading-8 text-gray-300">Estaremos aqui pra te ajudar nessa missao</p>
+            <div class="mt-6 flex max-w-md gap-x-4">
+              <label for="email" class="sr-only">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Digite seu Email">
+              <button type="submit" class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-700 shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#0083e0] to-[#023473] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto flex justify-between mt-10 grid gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div class="flex max-w-xl items-start justify-between gap-8">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Customer Stories</a>
+            <a href="#">Help</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div class="flex gap-8">
+            <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+          </div>
+      </div>
+    </div>
+  </footer>
 </html>
